@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 
 
 const { PORT } = require('./config/serverConfig');
-const CityRepository = require('./repository/city-repository')
+//const CityRepository = require('./repository/city-repository')
 
 const setupAndStartServer =  async () => {
 
@@ -14,8 +14,8 @@ const setupAndStartServer =  async () => {
     app.use(bodyParser.urlencoded({extended: true}));//middleware
     app.listen(PORT, () => {
         console.log(`Server started at ${PORT}`);
-        const repo = new CityRepository();
-        repo.createCity({name: "New Dehli"});
+        // const repo = new CityRepository();
+        // repo.deleteCity(10);
        
     });
 

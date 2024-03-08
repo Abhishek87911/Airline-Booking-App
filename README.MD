@@ -26,7 +26,7 @@
  - Once you have added your db config as listed above , go to src folder from your terminal and execute `npx sequelize db:create` 
  and then execute `npx sequelize db:migrate`
  
- ```
+ 
  ## DB Design
   - Airplane Table
   - Flight
@@ -35,5 +35,15 @@
 
   - A flight belongs to an airplane but one airplane can belongs to multiple flights
   - A city has many airports but one airport belongs to one city
-  One airport can have many flights but a flight belong to one airport
+  -One airport can have many flights but a flight belong to one airport
 
+
+  ##Tables
+
+  ### City -> id, name, created_at, updated_at
+  ### Airport -> id, name, address, city_id, created_at, updated_at
+     Relationship -> City has many airports and Airport belong to a city(one to many relation)
+
+```
+   npx sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer 
+```

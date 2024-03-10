@@ -18,18 +18,6 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
-      departutrTime: {
-        type: Sequelize.DATE,
-        allowNull: false
-      },
-      arrivalTime: {
-        type: Sequelize.DATE,
-        allowNull: false
-      },
-      price: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-      },
       departureAirportId: {
         type: Sequelize.INTEGER,
         allowNull: false
@@ -38,11 +26,22 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
-      boardingGate: {
-        type: Sequelize.STRING,
+      arrivalTime: {
+        type: Sequelize.DATE,
         allowNull: false
       },
-      toatlSeats: {
+      departureTime: {
+        type: Sequelize.DATE,
+        allowNull: false
+      },
+      price: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+      },
+      boardingGate: {
+        type: Sequelize.STRING
+      },
+      totalSeats: {
         type: Sequelize.INTEGER,
         allowNull: false
       },
@@ -51,8 +50,9 @@ module.exports = {
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+        
+        type: Sequelize.DATE,
+        allowNull: false
       }
     });
   },

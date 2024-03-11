@@ -2,7 +2,7 @@ const { ClientErrorsCodes } = require('../utils/error-codes');
 
 
 const validateCreateFlight = (req,res,next) => {
-    console.log(req.body);
+    
      if(!req.body.flightNumber ||
         !req.body.airplaneId ||
         !req.body.departureAirportId ||
